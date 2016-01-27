@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+}
+
+table, td, tr{
+    margin: auto;
+}
+
+#time{
+    float: left;
+    position: relative;
+    left: 40px;
+    padding: 10px;
+}
+p{
+    text-align: center;
+    font-size: 24px;
+}
+
+.screen{
+    background-color: grey;
+    height: 100px;
+    width: 300px;
+}
+
+.start {
+    float: left;
+
+}
+
+.stop {
+    float: left;
+
+}
+
+.reset {
+    float: left;
+
+}
