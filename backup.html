@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>stopwatch</title>
+        <link rel="stylesheet" href="stopstyle.css" charset="utf-8">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td colspan="3">
+                    <div class="screen">
+                        <div class="hours" id="time">
+                            <p>
+                                00:
+                            </p>
+                        </div>
+                        <div class="minutes" id="time">
+                            <p>
+                                00:
+                            </p>
+                        </div>
+                        <div class="seconds" id="time">
+                            <p>
+                                00:
+                            </p>
+                        </div>
+                        <div class="miliseconds" id="time">
+                            <p>
+                                00
+                            </p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="start">
+                        <button type="button" onclick="start()">Start</button>
+                    </div>
+                </td>
+                <td>
+                    <div class="stop">
+                        <button type="button">Stop</button>
+                    </div>
+                </td>
+                <td>
+                    <div class="reset">
+                        <button type="button">Reset</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript" src="stopwatch.js">
+
+        </script>
+    </body>
+</html>
