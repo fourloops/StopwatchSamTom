@@ -1,0 +1,77 @@
+body {
+}
+
+table, td, tr{
+    margin: auto;
+}
+
+#time{
+    float: left;
+    position: relative;
+    left: 7.5%;
+    top: 23%;
+    font-family: 'Orbitron', sans-serif;
+}
+p{
+    text-align: center;
+    font-size: 24px;
+    color: #85AFAD;
+    font-size: 40px;
+    transform: scaleY(2);
+}
+
+.screen{
+    -webkit-filter: blur(1px) grayscale(.5) hue-rotate(120deg) opacity(0.5);
+    background-color: #291610;
+    position: absolute;
+    left: 38.5%;
+    top: 35%;
+    height: 25%;
+    width: 28%;
+    text-align: center;
+
+
+}
+
+.stst{
+    position: absolute;
+    left: 78%;
+    top: 40%;
+}
+
+.start {
+    float: left;
+    z-index: 999;
+}
+
+.stop {
+    float: left;
+    z-index: 998;
+}
+
+.reset {
+    position: absolute;
+    left: 78%;
+    top: 48%;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+html {
+  background: url("../assets/oldclock.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+button{
+    background-color: #9E8662;
+    color: #362E19;
+    height: 50px;
+    width: 70px;
+    border: none;
+    font-size: 24px;
+    outline: none;
+}
