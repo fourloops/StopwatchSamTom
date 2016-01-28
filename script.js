@@ -1,12 +1,15 @@
 var seconds = 0;
+var int;
 
 function funcStart(){
     document.getElementById("eyede").innerHTML = seconds++;
-    setTimeout(funcStart,1000);
 }
-funcStart();
+
+function startClickHandler(){
+    funcStart();
+    int = setInterval(funcStart,1000);
+}
 
 function funcStop(){
-    var x = setTimeout(funcStart,1000);
-    return clearTimeout(x);
+    clearInterval(int);
  }
