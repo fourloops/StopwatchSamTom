@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="stopstyle.css" charset="utf-8">
   <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'/>
 </head>
-<body>
+<body onload="remove()">
     <table>
         <tr>
             <td colspan="3">
@@ -41,7 +41,7 @@
                 </div>
             </td>
             <td>
-                <div class="stop stst">
+                <div class="stop stst" id="stop">
                     <button type="button" onclick="funcStop();show();">Stop</button>
                 </div>
             </td>
