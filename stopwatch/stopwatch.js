@@ -1,9 +1,11 @@
+// declaring variables
 var secs = 0;
 var mins = 0;
 var hrs = 0;
 var mils = 0;
 var int;
 
+// function triggered after onclick() start function
 function funcStart() {
     double();
     document.getElementById("mils").innerHTML = mils;
@@ -25,6 +27,7 @@ function funcStart() {
     }
 }
 
+// adds a 0 to single digit numbers of millis, secs, mins and hours
 function double() {
     if (mils.toString().length === 1) {
         mils = "0" + mils;
@@ -40,15 +43,18 @@ function double() {
     }
 }
 
+// onclick start function starts the stopwatch
 function startClickHandler() {
     funcStart();
     int = setInterval(funcStart,10);
 }
 
+// onclick stop function stops the stopwatch
 function funcStop() {
     clearInterval(int);
  }
 
+// onclick reset function resets the stopwatch
  function reset() {
      mils = 0+"0";
      secs = 0+"0";
@@ -60,16 +66,19 @@ function funcStop() {
      document.getElementById("hrs").innerHTML = hrs + "&nbsp:&nbsp";
  }
 
+// hides stop/start button
  function hide(){
      document.getElementById("start").classList.add("hide");
      document.getElementById("stop").classList.remove("hide");
  }
 
+// shows stop/start button
  function show(){
      document.getElementById("stop").classList.add("hide");
      document.getElementById("start").classList.remove("hide");
  }
 
+// onload function hides stop when page loads
  function remove(){
      document.getElementById("stop").classList.add("hide");
  }
