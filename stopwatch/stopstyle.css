@@ -1,6 +1,3 @@
-body {
-}
-
 table, td, tr{
     margin: auto;
 }
@@ -18,6 +15,8 @@ p{
     font-size: 40px;
     transform: scaleY(2);
 }
+
+/*Webkit filter used to blur the digits into the background*/
 
 .screen{
     -webkit-filter: blur(1px) grayscale(.5) hue-rotate(120deg) opacity(0.5);
@@ -51,9 +50,13 @@ p{
     top: 48%;
 }
 
+/*hide class is toggled by the onclick functions*/
+
 .hide{
     visibility: hidden;
 }
+
+/*Makes the background image fit to screen for all major browsers*/
 
 html {
   background: url("../assets/oldclock.jpg") no-repeat center center fixed;
@@ -62,6 +65,18 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
 button{
     background-color: transparent;
     color: #362E19;
@@ -72,286 +87,105 @@ button{
     outline: none;
 }
 
-@media screen and (max-width: 1500px) {
-    #time{
-        float: left;
-        position: relative;
-        left: 7.5%;
-        top: 23%;
-        font-family: 'Orbitron', sans-serif;
-    }
-    p{
-        text-align: center;
-        color: #85AFAD;
-        font-size: 40px;
-        transform: scaleY(2);
-    }
+/*Adds pulse effect for hovering over the buttons*/
 
-    .screen{
-        -webkit-filter: blur(1px) grayscale(.5) hue-rotate(120deg) opacity(0.5);
-        position: absolute;
-        left: 40%;
-        top: 40%;
-        height: 80px;
-        width: 28%;
-        text-align: center;
-    }
-
-    .stst{
-        position: absolute;
-        left: 78%;
-        top: 40%;
-    }
-
-    .start {
-        float: left;
-        z-index: 999;
-    }
-
-    .stop {
-        float: left;
-        z-index: 998;
-    }
-
-    .reset {
-        position: absolute;
-        left: 78%;
-        top: 48%;
-    }
-
+button:hover{
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
+
+/*Media queries for resizing and positioning clock digits and buttons*/
 
 @media screen and (max-width: 1450px) {
-    #time{
-        float: left;
-        position: relative;
-        left: 7.5%;
-        top: 23%;
-        font-family: 'Orbitron', sans-serif;
-    }
     p{
-        text-align: center;
-        color: #85AFAD;
         font-size: 35px;
-        transform: scaleY(2);
     }
 
     .screen{
-        -webkit-filter: blur(1px) grayscale(.5) hue-rotate(120deg) opacity(0.5);
-        position: absolute;
         left: 38.5%;
-        top: 40%;
-        height: 80px;
-        width: 28%;
-        text-align: center;
     }
 
-    .stst{
-        position: absolute;
-        left: 78%;
-        top: 40%;
-    }
-
-    .start {
-        float: left;
-        z-index: 999;
-    }
-
-    .stop {
-        float: left;
-        z-index: 998;
-    }
-
-    .reset {
-        position: absolute;
-        left: 78%;
-        top: 48%;
-    }
     button{
-        background-color: transparent;
-        color: #362E19;
         height: 40px;
         width: 60px;
-        border: none;
         font-size: 18px;
-        outline: none;
     }
-
-
 }
 
-
 @media screen and (max-width: 1120px) {
-    #time{
-        float: left;
-        position: relative;
-        left: 7.5%;
-        top: 23%;
-        font-family: 'Orbitron', sans-serif;
-    }
     p{
-        text-align: center;
-        color: #85AFAD;
         font-size: 30px;
-        transform: scaleY(2);
     }
 
     .screen{
-        -webkit-filter: blur(1px) grayscale(.5) hue-rotate(120deg) opacity(0.5);
-        position: absolute;
         left: 38.5%;
-        top: 40%;
-        height: 80px;
-        width: 28%;
-        text-align: center;
     }
 
     .stst{
-        position: absolute;
         left: 85%;
-        top: 40%;
-    }
-
-    .start {
-        float: left;
-        z-index: 999;
-    }
-
-    .stop {
-        float: left;
-        z-index: 998;
     }
 
     .reset {
-        position: absolute;
         left: 85%;
-        top: 48%;
     }
+
     button{
-        background-color: transparent;
-        color: #362E19;
         height: 40px;
         width: 60px;
-        border: none;
         font-size: 18px;
-        outline: none;
     }
-
-
 }
 
 @media screen and (max-width: 960px) {
-    #time{
-        float: left;
-        position: relative;
-        left: 7.5%;
-        top: 23%;
-        font-family: 'Orbitron', sans-serif;
-    }
     p{
-        text-align: center;
-        color: #85AFAD;
         font-size: 28px;
-        transform: scaleY(2);
     }
 
     .screen{
-        -webkit-filter: blur(1px) grayscale(.5) hue-rotate(120deg) opacity(0.5);
-        position: absolute;
         left: 38.5%;
-        top: 40%;
-        height: 80px;
-        width: 28%;
-        text-align: center;
     }
 
     .stst{
-        position: absolute;
         left: 85%;
-        top: 40%;
-    }
-
-    .start {
-        float: left;
-        z-index: 999;
-    }
-
-    .stop {
-        float: left;
-        z-index: 998;
     }
 
     .reset {
-        position: absolute;
         left: 85%;
-        top: 48%;
     }
+
     button{
-        background-color: transparent;
-        color: #362E19;
         height: 40px;
         width: 60px;
-        border: none;
         font-size: 18px;
-        outline: none;
     }
 }
 
 @media screen and (max-width: 900px) {
-    #time{
-        float: left;
-        position: relative;
-        left: 7.5%;
-        top: 23%;
-        font-family: 'Orbitron', sans-serif;
-    }
     p{
-        text-align: center;
-        color: #85AFAD;
         font-size: 24px;
-        transform: scaleY(2);
     }
 
     .screen{
-        -webkit-filter: blur(1px) grayscale(.5) hue-rotate(120deg) opacity(0.5);
-        position: absolute;
         left: 38.5%;
-        top: 40%;
-        height: 80px;
-        width: 28%;
-        text-align: center;
     }
 
     .stst{
-        position: absolute;
         left: 90%;
-        top: 40%;
-    }
-
-    .start {
-        float: left;
-        z-index: 999;
-    }
-
-    .stop {
-        float: left;
-        z-index: 998;
     }
 
     .reset {
-        position: absolute;
         left: 90%;
-        top: 48%;
     }
+
     button{
-        background-color: transparent;
-        color: #362E19;
         height: 40px;
         width: 60px;
-        border: none;
         font-size: 18px;
-        outline: none;
     }
-
-
 }
