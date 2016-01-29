@@ -62,8 +62,14 @@ function funcStop() {
 
  function hide(){
      document.getElementById("start").classList.add("hide");
+     document.getElementById("stop").classList.remove("hide");
  }
 
  function show(){
+     document.getElementById("stop").classList.add("hide");
      document.getElementById("start").classList.remove("hide");
+ }
+
+ function remove(){
+     document.getElementById("stop").classList.add("hide");
  }
